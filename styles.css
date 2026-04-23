@@ -19,3 +19,8 @@
   width: 24px;
   height: 24px;
 }
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
