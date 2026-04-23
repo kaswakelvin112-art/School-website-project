@@ -1,5 +1,4 @@
-
-
+/* Footer Styles */
 .footer .socials {
   display: flex;
   justify-content: center;
@@ -8,21 +7,147 @@
 }
 
 .footer .socials a {
-  color: #333; /* Default color for icons */
+  color: #f0b800;
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .footer .socials a:hover {
-  color: #007bff; /* Hover color */
+  color: #fff;
 }
 
-.footer .socials svg {
-  width: 24px;
-  height: 24px;
+.footer .socials img {
+  width: 30px;
+  height: 30px;
 }
 
-table, th, td {
-  border: 1px solid black;
+.footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Table Styles */
+table,
+th,
+td {
+  border: 1px solid #ddd;
   border-collapse: collapse;
+  padding: 8px;
 }
+
+table {
+  width: 100%;
+  margin: 20px 0;
+}
+
+th {
+  background-color: #f0b800;
+  color: #0d2260;
+}
+
+* {
+      margin:0;
+      padding:0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .navbar{
+      display:block;
+      padding: 8px 20px;
+      width: 100%;
+      justify-content: space-between;
+       align-items:center;
+       align-self: flex-start;
+
+
+    }
+    .navbar a{
+      color:#f0b800;
+      text-decoration: none;
+      font-size: 20px;
+      font-style: verdana;
+      padding:15px;
+       display:block;
+       text-align: center;
+       font-weight: bold;
+    }
+    .navbar li{
+        float: right;
+    }
+     .brand{
+         display: flex;
+         align-items: center;
+         gap: 50px;
+     }
+     .school-name{
+        color:#f0b800;
+        white-space: nowrap;
+     }
+     h1{
+        margin-right: 20px;
+     }
+    
+    .navbar a:hover{
+      background-color: #132c78;
+    }
+    .nav-links{
+        text-decoration: none;
+        list-style:none ;
+        overflow: hidden;
+        padding: 15px;
+        margin: 0;
+        
+
+    }
+    .nav-links a:active{
+        background-color: #f31c09;
+    }.Enroll-btn{
+      background-color:#f31c09;
+      color: #0d2260;
+      padding:10px 18px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 20px;
+      letter-spacing: 0.5px;
+      white-space: nowrap;
+    }
+    .Enroll-btn:hover{
+         background-color: #f31c09;
+    }
+    
+    header{
+        background-color:#0d2260;
+         color:#f0b800;
+         border-bottom: #f31c09;
+    }
+    footer{
+         background-color:#0d2260; 
+         color:#f0b800;
+         padding: 40px;
+    }
+    footer a{
+      text-decoration: none;
+      color: #f0b800;
+    }
+    .hero{
+      height:300px;
+      display:flex;
+      justify-content: center;
+       text-align: center;
+       align-items: center;
+       background-image: url(/images/Building.jpg);
+       
+    }
+    footer h5{
+      font-weight: bold;
+      font-size: 20px;
+    }
+    #info{
+        font-weight: bold;
+      font-size: 20px;
+      
+    }
+    .footer ul{
+        list-style: none;
+        justify-content: center;
+        display: flex;
+    }
