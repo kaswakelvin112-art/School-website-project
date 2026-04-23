@@ -3,24 +3,65 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/jpg" href="images/royal-giant-high-school-mityana-logo-png_seeklogo-556113.jpg">
     <title>Royal Giant High School</title>
   </head>
+  <style>
+    .navbar{
+      display:flex;
+    }
+    .navbar a{
+        display:block;
+        text-align: center;
+    }
+    
+    .navbar a:hover{
+      background-color: #132c78;
+    }
+    .nav-links{
+      display:flex;
+      list-style: none;
+      gap: 20px;
+      float:right;
+    }
+    a{
+      color:#f0b800;
+      text-decoration: none;
+      font-size: 20px;
+      font-style: verdana;
+    }
+    header{
+        background-color:#0d2260;
+         color:#f0b800;
+    }
+    footer{
+         background-color:#0d2260; 
+         color:#f0b800;
+    }
+    
+   
+
+  </style>
   <body>
     <header>
-      <h1>ROYAL GIANT HIGH SCHOOL</h1>
+      
       <img
         src="images/royal-giant-high-school-mityana-logo-png_seeklogo-556113.png"
         alt="Royal Giant High School Logo"
         height="200"
       />
-      <nav>
-        <a href="">Home</a>
-        <a href="">About</a>
-        <a href="">Academics/Programs</a>
-        <a href="">Gallery</a>
-        <a href="">Contact</a>
+      <nav class="navbar">
+        <ul class="nav-links">
+        <li><a href="">Home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Academics/Programs</a></li>
+        <li><a href="">Gallery</a></li>
+        <li><a href="">Contact</a></li>
+        </ul>
       </nav>
     </header>
+
+    <h1>ROYAL GIANT HIGH SCHOOL</h1>
     <!-- Home: This section should provide an overview of the school, including its history, mission, and values. It should also include a brief description of the school's academic programs and extracurricular activities. -->
     <main>
       <article class="introduction" role="introduction">
