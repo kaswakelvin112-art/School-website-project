@@ -85,9 +85,11 @@
     footer{
          background-color:#0d2260; 
          color:#f0b800;
+         padding: 40px;
     }
     footer a{
       text-decoration: none;
+      color: #f0b800;
     }
     .hero{
       height:300px;
@@ -97,6 +99,20 @@
        align-items: center;
        background-image: url(/images/Building.jpg);
        
+    }
+    footer h5{
+      font-weight: bold;
+      font-size: 20px;
+    }
+    #info{
+        font-weight: bold;
+      font-size: 20px;
+      
+    }
+    .footer ul{
+        list-style: none;
+        justify-content: center;
+        display: flex;
     }
     
    
@@ -182,16 +198,25 @@
     
     
     <footer>
-      <p>&copy; 2026 Royal Giant High School. All rights reserved.</p>
+      <div id="footer">
       <h5>Quick links</h5>
       <div>
         <ul>
-      <a href="">Home</a>
-      <a href="">About us</a>
-      <a href=""> us</a>
-      <ul>+256-754-707-762</ul>
-      <ul>+256-776-004-201</ul>
+      <a href="">Home</a><br>
+      <a href="">About us</a><br>
+      <a href="">Contact</a>
+      </div>
+      
+      <div class="footer">
+      <h5> For information</h5>
+      <ul>
+      <li>+256-754-707-762</li>
+      <li>+256-776-004-201</li>
+      <li>P.O. Box 69, Mityana, Uganda, East Africa,</li>
+      <li> www.royalgiant.ac.ug</li>
+       </ul>
       </ul>
+      </div>
       </div>
     </footer>
   </body>
