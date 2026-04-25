@@ -607,10 +607,11 @@ table, tr, td, th{
   display: inline-flex;
   padding: 0.75rem;
   border-radius: 14px;
+  margin-bottom: 1rem;
 }
 
-.footer .socials img {
-  width: 100%;
+.footer .socials svg:hover {
+  fill:data-color;
 }
 
 .footer ul {
