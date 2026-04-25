@@ -27,6 +27,7 @@ a{
 }
 img{
     max-width:100%;
+    height: auto;
     display: block;
 }
 
@@ -62,9 +63,10 @@ header{
 }
 
 .flex-container img{
-    width: 50%;
+    width: 80%;
     height: auto;
     object-fit: cover;
+    
 }
 
 .school-name{
@@ -289,7 +291,7 @@ main{
     padding: 2rem 1.8rem;
     margin: 2rem auto;
     box-shadow: var(--shadow);
-    width: 80%;
+    width: 100%;
 }
 
 .history p,.mv-card p{

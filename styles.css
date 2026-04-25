@@ -1,3 +1,127 @@
 
+@media (max-width:1100px) {
+    .flex-container img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+   }
+}
+
+@media (max-width:800px) {
+main{
+    width:90%;
+    margin: 0 auto;
+}
+
+.flex-container{
+    grid-template-columns: 2fr 1fr;
+}
+
+/* index page */
+.welcome{
+    width:100%;
+    min-height: clamp(250px,100vh,500px);
+}
+
+
+
+.director{
+    margin-bottom: 2rem;
+    padding: 2rem;
+}
+
+.video-wrapper{
+    max-width: 780px;
+}
+
+.fees-structure{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/* contact form */
+.inquiryForm{
+    width: 100%;
+}
+
+.contact-card img{
+    width:25%;
+    margin-right: 0.7rem;
+    vertical-align: middle;
+}
+
+/* google map */
+.google-map{
+    width: 100%;
+}
+}
+
+@media (max-width:700px) {
+    .flex-container{
+        grid-template-columns: 1fr;
+    }
+    .flex-container img{
+        width: 60%;
+        border-radius: 8px;
+    }
+    .flex-container .content{
+        width:70%;
+        gap:0.5rem;
+    }
+
+    .flex-container .content ul{
+        gap:0.05rem;
+    }
+
+    .welcome{
+        width: 100%;
+
+    }
+
+    .headteacher-message{
+        flex-direction: column;
+    }
+    .headteacher-message img{
+        width:60%;
+    }
+    .director{
+        flex-direction: column;
+    }
+}
+
+@media (max-width:600px) {
+    .headteacher-message{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .academic-highlights .container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .mv-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .value-cards{
+        grid-template-columns: 1fr;
+    }
+    .giants{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .note-section{
+        grid-template-columns: 1fr;
+    }
+    .other-contacts{
+        flex-direction: column;
+    }
+}
+
+
   
     
