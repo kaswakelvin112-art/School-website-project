@@ -599,6 +599,8 @@ table, tr, td, th{
   gap: 1rem;
   flex-wrap: wrap;
   margin-bottom: 1rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer .socials a {
@@ -608,7 +610,7 @@ table, tr, td, th{
 }
 
 .footer .socials img {
-  width: 32px;
+  width: 100%;
 }
 
 .footer ul {

@@ -7,7 +7,8 @@ async function loadHeaderFooter() {
     try {
       const headerResponse = await fetch("header.html");
       const headerContent = await headerResponse.text();
-      headerElement.outerHTML = headerContent;
+      headerElement.innerHTML = headerContent;
+      console.log(headerContent);
     } catch (error) {
       console.error("Error loading header:", error);
     }
@@ -17,7 +18,8 @@ async function loadHeaderFooter() {
     try {
       const footerResponse = await fetch("footer.html");
       const footerContent = await footerResponse.text();
-      footerElement.outerHTML = footerContent;
+      console.log(footerContent);
+      footerElement.innerHTML = footerContent;
     } catch (error) {
       console.error("Error loading footer:", error);
     }
