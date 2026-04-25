@@ -7,7 +7,7 @@
       name="description"
       content="Royal Giant High School - Center of Excellence in Mityana, Uganda. Providing quality education and fostering student development."
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="new-styles.css" />
     <link rel="stylesheet" href="styles.css" />
     <link
       rel="icon"
@@ -19,17 +19,18 @@
       rel="stylesheet"
     />
     <title>Royal Giant High School</title>
-    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header></header>
     <main>
       <section class="hero">
         <div class="container">
-          <h2>Welcome to Royal Giant High School</h2>
+          <div class="welcome">
+            <h2>Welcome to Royal Giant High School</h2>
+            <p>The Center of Excellence</p>
+          </div>
           <div class="intro-content">
             <h3>Who we are</h3>
-            <p>The Center of Excellence</p>
             <p>
               Royal Giant High School is a prestigious educational institution
               located in Mityana, Uganda. We are committed to providing quality
@@ -45,48 +46,61 @@
           </div>
         </div>
       </section>
+      <section class="headteacher-message">
+        <div class="image">
+          <img src="./images/person-placeholder.jpg" alt="Head Teacher Mr.Nilo Francis" />
+        </div>
+        <div class="message">
+          <h3>Message from the Head Teacher</h3>
+          <p>
+            Dear Students, Parents, and Staff,
+          </p>
+          <p>
+            It is my pleasure to welcome you to Royal Giant High School. I am committed to providing a nurturing environment where every student can excel academically and personally.
+          </p>
+        </div>
+      </section>
       <section class="mission-vision">
-        <div class="container">
-          <div class="mission">
+        <div class="mv-container">
+          <div class="mv-card mission">
             <h2>Our Mission</h2>
             <p>
               Giving quality education, moral guidance and contemporary life
               skills to all learners.
             </p>
           </div>
-          <div class="vision">
+          <div class="mv-card vision">
             <h2>Our Vision</h2>
             <p>To Position Royal Giant High School a Centre of Excellence</p>
           </div>
         </div>
       </section>
-      <section class="academics">
+      
+      <section class="academic-highlights">
+        <h3>The Giant <span id="year">2026</span></h3>
         <div class="container">
-          <h2>Our Academic Programs</h2>
-          <p>
-            At Royal Giant High School, we offer a comprehensive academic
-            program that is designed to prepare our students for success in
-            their future endeavors. Our curriculum is based on the Ugandan
-            national education system and includes a wide range of subjects,
-            including mathematics, science, literature, social studies, and
-            foreign languages.
-          </p>
-          <p>
-            We also offer a variety of extracurricular activities and clubs to
-            help our students develop their interests and talents outside of the
-            classroom. These activities include sports teams, music and drama
-            clubs, debate teams, and community service organizations.
-          </p>
-        </div>
-      </section>
-      <section class="academic-giant">
-        <div class="container">
-          <h3>The Giant <span id="year">2026</span></h3>
-          <div class="img-placeholder"></div>
+          <figure class="student">
+            <img
+              src="./images/person-placeholder.jpg"
+              alt="A-Level Student"
+            />
+            <figcaption>
+              Enock <strong>BCM</strong> <em>19 points</em>
+            </figcaption>
+          </figure>
+          <figure class="student">
+            <img
+              src="./images/person-placeholder.jpg"
+              alt="O-Level Student"
+            />
+            <figcaption>
+              Ahimuza Marvin <strong>AAAAAAAABB</strong>
+            </figcaption>
+          </figure>
         </div>
       </section>
     </main>
-
+    <footer></footer>
     <script src="script.js"></script>
   </body>
 </html>
