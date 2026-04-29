@@ -16,6 +16,10 @@ main{
 .flex-container{
     grid-template-columns: 2fr 1fr;
 }
+.content h1{
+    justify-self: center;
+    margin-left: 1rem;
+}
 
 /* index page */
 .welcome{
@@ -60,6 +64,7 @@ main{
 
 @media (max-width:700px) {
     .flex-container{
+        max-width: 650px;
         grid-template-columns: 1fr;
     }
     .flex-container img{
@@ -67,12 +72,17 @@ main{
         border-radius: 8px;
     }
     .flex-container .content{
-        width:70%;
+        align-items: center;
+        align-items: center;
         gap:0.5rem;
     }
 
     .flex-container .content ul{
         gap:0.05rem;
+    }
+
+    .enroll-btn{
+        width: 300px;
     }
 
     .welcome{
@@ -84,7 +94,7 @@ main{
         flex-direction: column;
     }
     .headteacher-message img{
-        width:60%;
+        width: 100%;
     }
     .director{
         flex-direction: column;
@@ -92,9 +102,17 @@ main{
 }
 
 @media (max-width:600px) {
+    .flex-container{
+        width: 100%;
+        margin:0 auto;
+    }
     .headteacher-message{
         flex-direction: column;
         align-items: center;
+    }
+
+    .director img{
+        width:100%
     }
 
     .academic-highlights .container{
@@ -120,6 +138,23 @@ main{
     .other-contacts{
         flex-direction: column;
     }
+    .other-contacts img{
+        width:50px;
+    }
+    .other-contacts .contact-card{
+        display: flex;
+    }
+}
+
+@media (max-width:420px) {
+    .flex-container .content{
+        width: 400px;
+    }
+    .nav-links{
+        flex-direction: column;
+        align-items: center;
+    }
+    
 }
 
 
