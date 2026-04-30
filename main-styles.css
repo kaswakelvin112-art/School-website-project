@@ -655,7 +655,7 @@ h2 {
   height: 50vh;
   background:
     linear-gradient(135deg, rgba(13, 34, 96, 0.72), rgba(13, 34, 96, 0.64)),
-    url("./pics/A\'level\ students.jpg") center/cover no-repeat;
+    url("./pics/A_level_students.jpg") center/cover no-repeat;
 }
 .overlay {
   flex-direction: column-reverse;
