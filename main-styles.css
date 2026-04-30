@@ -1455,7 +1455,7 @@ tbody tr:hover {
   }
 
   .menu-toggle.active {
-    transform: rotate(90deg);
+    transform: rotate(180deg);
   }
 
   .nav-links {
