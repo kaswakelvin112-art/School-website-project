@@ -54,6 +54,10 @@ document.addEventListener("DOMContentLoaded", async function () {
   dynamicShowOfCards();
 });
 
+//dynamic background for welcome section
+const welcome = document.querySelector(".welcome");
+welcome.style.backgroundImage = `url(${welcome.querySelector("img").src})`;
+
 function setupToggleMenu() {
   const toggleMenu = document.querySelector(".menu-toggle");
   const navLinks = document.querySelector(".nav-links");
@@ -109,6 +113,7 @@ function dynamicShowOfCards() {
   });
 }
 
+
 function enableAcademicsLinks() {
   const dropdownContainer = document.querySelector(".academic-dropdown");
   const innerLinks = document.querySelector(".innerAcademicsLink");
@@ -132,7 +137,6 @@ function enableAcademicsLinks() {
     });
   }
 
-  // Handle click on the Academics link for mobile
   const academicsLink = document.querySelector(".academic-page");
   if (academicsLink) {
     academicsLink.addEventListener("click", function (e) {
