@@ -296,7 +296,6 @@ main {
   place-items: center;
   gap: 1.2rem;
   position: relative;
-  background: linear-gradient(135deg, rgba(13, 34, 96, 0.72), rgba(13, 34, 96, 0.64));
   text-align: center;
   background-repeat: no-repeat;
   background-position: center;
@@ -307,22 +306,29 @@ main {
 
 .welcome h2 {
   font-size: clamp(2.5rem, 4vw, 4rem);
-  color: var(--accent);
+  color: var(--primary);
   letter-spacing: 0.02em;
 }
 
 .welcome hr {
   text-align: center;
   width: 70%;
+  margin: 0 auto;
 }
 
 .welcome p {
-  color: var(--accent);
+  color: color-mix(in oklab, var(--accent) 65%, var(--text-dark));
   font-size: 1.8rem;
   max-width: 780px;
 }
 
+.welcome-content{
+  z-index:10;
+}
 
+.slides{
+  z-index: -1;
+}
 .slide{
   position: absolute;
   inset:0;
@@ -332,7 +338,7 @@ main {
   transition: opacity 1s ease-in-out;
 }
 .slide.active{
-  opacity:0.4;
+  opacity:0.8;
 }
 
 /* @keyframes slideShow {
