@@ -295,8 +295,9 @@ main {
   display: grid;
   place-items: center;
   gap: 1.2rem;
+  position: relative;
+  background: linear-gradient(135deg, rgba(13, 34, 96, 0.72), rgba(13, 34, 96, 0.64));
   text-align: center;
-  
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -319,6 +320,18 @@ main {
   color: var(--accent);
   font-size: 1.8rem;
   max-width: 780px;
+}
+
+.slider{
+  position: absolute;
+  inset:0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.slider.active{
+  opacity:1;
 }
 
 @keyframes slideShow {

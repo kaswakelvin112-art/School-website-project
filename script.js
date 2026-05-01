@@ -54,9 +54,17 @@ document.addEventListener("DOMContentLoaded", async function () {
   dynamicShowOfCards();
 });
 
-//dynamic background for welcome section
-const welcome = document.querySelector(".welcome");
-welcome.style.backgroundImage = `url(${welcome.querySelector("img").src})`;
+//image slider for home page
+const slides = document.querySelectorAll(".slides");
+let current=0;
+
+function nextSlide() {
+  slides[current].classList.remove("active");
+  current = (current + 1) % slides.length;
+  slides[current].classList.add("active");
+}
+
+setInterval(nextSlide, 4000);
 
 function setupToggleMenu() {
   const toggleMenu = document.querySelector(".menu-toggle");
