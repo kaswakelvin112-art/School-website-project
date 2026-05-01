@@ -1643,7 +1643,7 @@ tbody tr:hover {
     display: flex;
   }
 
-  .academic-dropdown {
+  academic-dropdown {
     position: relative;
     width: 100%;
   }
