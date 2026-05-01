@@ -55,13 +55,14 @@ document.addEventListener("DOMContentLoaded", async function () {
 });
 
 //image slider for home page
-const slides = document.querySelectorAll(".slides");
+const slide = document.querySelectorAll(".slide");
 let current=0;
-
+console.log(slide.length)
 function nextSlide() {
-  slides[current].classList.remove("active");
-  current = (current + 1) % slides.length;
-  slides[current].classList.add("active");
+  slide[current].classList.remove("active");
+  current = (current + 1) % slide.length;
+  slide[current].classList.add("active");
+  console.log(current)
 }
 
 setInterval(nextSlide, 4000);

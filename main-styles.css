@@ -322,7 +322,8 @@ main {
   max-width: 780px;
 }
 
-.slider{
+
+.slide{
   position: absolute;
   inset:0;
   background-size: cover;
@@ -330,11 +331,11 @@ main {
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
-.slider.active{
-  opacity:1;
+.slide.active{
+  opacity:0.4;
 }
 
-@keyframes slideShow {
+/* @keyframes slideShow {
   0% {
     background-image: url(./pics/Building.jpg);
   }
@@ -350,7 +351,7 @@ main {
   100% {
     background-image: url(./pics/DSC_9560.png);
   }
-}
+} */
 
 /* Intro content */
 .intro-content {
