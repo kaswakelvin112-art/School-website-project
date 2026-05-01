@@ -114,8 +114,6 @@ h1.small-screen {
   gap: 0;
 }
 
-
-
 .navbar {
   margin-top: 0.75rem;
 }
@@ -131,7 +129,7 @@ h1.small-screen {
 }
 
 .nav-links li {
-  display:inline-flex;
+  display: inline-flex;
   flex-grow: 1;
   min-width: 100px;
 }
@@ -187,7 +185,7 @@ h1.small-screen {
   min-width: 220px;
   background: white;
   border-radius: 8px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   padding: 0.5rem 0;
   opacity: 0;
   visibility: hidden;
@@ -228,7 +226,6 @@ h1.small-screen {
   color: var(--primary);
   padding-left: 1.5rem;
 }
-
 
 .menu-toggle {
   display: none;
@@ -299,11 +296,12 @@ main {
   place-items: center;
   gap: 1.2rem;
   text-align: center;
-  background:
-    linear-gradient(180deg, rgba(13, 34, 96, 0.72), rgba(13, 34, 96, 0.64)),
-    url(./pics/Building.jpg) center/cover no-repeat;
+  
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   box-shadow: var(--shadow);
-  animation: slideShow 30s infinite;
+  animation: slideShow 20s infinite ease-in-out;
 }
 
 .welcome h2 {
@@ -325,29 +323,19 @@ main {
 
 @keyframes slideShow {
   0% {
-    background:
-      linear-gradient(180deg, rgba(13, 34, 96, 0.72), rgba(13, 34, 96, 0.64)),
-      url(./pics/Building.jpg) center/cover no-repeat;
+    background-image: url(./pics/Building.jpg);
   }
   25% {
-    background:
-      linear-gradient(180deg, rgba(13, 34, 96, 0.72), rgba(13, 34, 96, 0.64)),
-      url(./pics/Mak\ hosts3.jpg) center/cover no-repeat;
+    background-image: url(./pics/Mak\ hosts3.jpg);
   }
   50% {
-    background:
-      linear-gradient(180deg, rgba(13, 34, 96, 0.72), rgba(13, 34, 96, 0.64)),
-      url(./pics/BUS.png) center/cover no-repeat;
+    background-image: url(./pics/BUS.png);
   }
   75% {
-    background:
-      linear-gradient(180deg, rgba(13, 34, 96, 0.72), rgba(13, 34, 96, 0.64)),
-      url(./pics/O_level_students.jpg) center/cover no-repeat;
+    background-image: url(./pics/O_level_students.jpg);
   }
   100% {
-    background:
-      linear-gradient(180deg, rgba(13, 34, 96, 0.72), rgba(13, 34, 96, 0.64)),
-      url(./pics/DSC_9560.png) center/cover no-repeat;
+    background-image: url(./pics/DSC_9560.png);
   }
 }
 
@@ -1647,34 +1635,34 @@ tbody tr:hover {
     position: relative;
     width: 100%;
   }
-  
+
   .innerAcademicsLink.show {
     max-height: 300px;
   }
-  
+
   .innerAcademicsLink li a {
     padding: 0.5rem 1rem;
   }
-  
+
   .academic-dropdown:hover .innerAcademicsLink {
     opacity: 1;
     visibility: visible;
     transform: none;
   }
-  
+
   /* Don't auto-show on hover for mobile */
   .academic-dropdown:hover .add-icon {
     transform: none;
   }
 
-.innerAcademicsLink {
+  .innerAcademicsLink {
     position: absolute;
     top: 100%;
     left: 0;
     min-width: 220px;
     background: white;
     border-radius: 8px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     padding: 0.5rem 0;
     opacity: 0;
     visibility: hidden;
@@ -1682,18 +1670,17 @@ tbody tr:hover {
     transition: all 0.3s ease;
     z-index: 100;
   }
-  
+
   .innerAcademicsLink.show {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
   }
-  
+
   .academic-dropdown:hover .add-icon {
     transform: rotate(180deg);
   }
 
-  
   .enroll-btn {
     margin-top: 0;
     flex-grow: 1;
