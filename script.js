@@ -44,7 +44,6 @@ function highlightCurrentPageLink() {
       link.classList.add("current-page-footer");
     }
   });
-
 }
 
 // Load header and footer when the page loads
@@ -52,6 +51,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   await loadHeaderFooter();
   setupToggleMenu();
   highlightCurrentPageLink();
+  dynamicShowOfCards();
 });
 
 function setupToggleMenu() {
@@ -63,13 +63,149 @@ function setupToggleMenu() {
       console.log("Toggle menu clicked");
       navLinks.classList.toggle("show");
       toggleMenu.classList.toggle("active");
-      if(toggleMenu.name==="close-outline"){
-        toggleMenu.name="reorder-three-outline";
-      }else{
-        toggleMenu.name="close-outline";
+      if (toggleMenu.name === "close-outline") {
+        toggleMenu.name = "reorder-three-outline";
+      } else {
+        toggleMenu.name = "close-outline";
       }
     });
   }
+
+  document.addEventListener("click", (e) => {
+    const isClickInsideMenu = navLinks.contains(e.target);
+    const isToggleBtn = toggleMenu.contains(e.target);
+
+    if (!isClickInsideMenu && !isToggleBtn) {
+      navLinks.classList.remove("show");
+      toggleMenu.name = "reorder-three-outline";
+    }
+  });
+}
+
+function dynamicShowOfCards() {
+  const mv_cards = document.querySelectorAll(".mv-card");
+  const value_cards = document.querySelectorAll(".value-card");
+
+  window.addEventListener("scroll", function () {
+    const scrollPosition = window.innerHeight * 0.85;
+    mv_cards.forEach((card) => {
+      const cardTop = card.getBoundingClientRect().top;
+      if (cardTop < scrollPosition) {
+        card.classList.add("show");
+      } else {
+        card.classList.remove("show");
+      }
+    });
+
+    value_cards.forEach((card) => {
+      const cardTop = card.getBoundingClientRect().top;
+      console.log(cardTop);
+      if (cardTop < scrollPosition) {
+        card.classList.add("show");
+      } else {
+        card.classList.remove("show");
+      }
+    });
+  });
+}
+
+function enableAcademicsLinks() {
+  const dropdownContainer = document.querySelector('.academic-dropdown');
+  const innerLinks = document.querySelector('.innerAcademicsLink');
+  const addIcon = document.querySelector('.add-icon');
+  
+  if (!dropdownContainer || !innerLinks) {
+    console.warn("Dropdown elements not found");
+    return;
+  }
+  
+  if (addIcon) {
+    addIcon.addEventListener('click', function(e) {
+        innerLinks.classList.toggle('show');
+        
+        // Rotate icon
+        if (innerLinks.classList.contains('show')) {
+          addIcon.style.transform = 'rotate(180deg)';
+        } else {
+          addIcon.style.transform = 'rotate(0deg)';
+        }
+      
+    });
+  }
+  
+  // Handle click on the Academics link for mobile
+  const academicsLink = document.querySelector('.academic-page');
+  if (academicsLink) {
+    academicsLink.addEventListener('click', function(e) {
+      if (isMobile()) {
+        e.preventDefault();
+        innerLinks.classList.toggle('show');
+        
+        if (addIcon) {
+          if (innerLinks.classList.contains('show')) {
+            addIcon.style.transform = 'rotate(180deg)';
+          } else {
+            addIcon.style.transform = 'rotate(0deg)';
+          }
+        }
+      }
+    });
+  }
+  
+  // Close dropdown when clicking outside (mobile)
+  document.addEventListener('click', function(e) {
+    if (isMobile() && !dropdownContainer.contains(e.target)) {
+      innerLinks.classList.remove('show');
+      if (addIcon) {
+        addIcon.style.transform = 'rotate(0deg)';
+      }
+    }
+  });
+  
+  // Handle window resize
+  window.addEventListener('resize', function() {
+    if (!isMobile()) {
+      innerLinks.classList.remove('show');
+      if (addIcon) {
+        addIcon.style.transform = 'rotate(0deg)';
+      }
+    }
+  });
+}
+
+// Also update your setupToggleMenu function to work with dropdown
+function setupToggleMenu() {
+  const toggleMenu = document.querySelector(".menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
+
+  if (toggleMenu && navLinks) {
+    toggleMenu.addEventListener("click", function() {
+      console.log("Toggle menu clicked");
+      navLinks.classList.toggle("show");
+      toggleMenu.classList.toggle("active");
+      
+      // Change icon
+      const iconName = toggleMenu.getAttribute("name");
+      if (iconName === "close-outline") {
+        toggleMenu.setAttribute("name", "reorder-three-outline");
+      } else {
+        toggleMenu.setAttribute("name", "close-outline");
+      }
+    });
+  }
+
+  // Close menu when clicking outside
+  document.addEventListener("click", (e) => {
+    const toggleBtn = document.querySelector(".menu-toggle");
+    const nav = document.querySelector(".nav-links");
+    
+    if (nav && toggleBtn && !nav.contains(e.target) && !toggleBtn.contains(e.target)) {
+      nav.classList.remove("show");
+      if (toggleBtn) {
+        toggleBtn.setAttribute("name", "reorder-three-outline");
+      }
+    }
+  });
 }
 
 const form = document.querySelector("form");
@@ -87,6 +223,9 @@ form.addEventListener("submit", function (event) {
 
   if (!name) {
     nameWarning.innerHTML = "Please fill in the name field.";
+    nameWarning.hidden = false;
+  } else if (name.length < 5) {
+    nameWarning.innerHTML = "Name should be atleast 5 characters.";
     nameWarning.hidden = false;
   } else if (!phone) {
     phoneWarning.innerHTML = "Please fill in the phone field.";
