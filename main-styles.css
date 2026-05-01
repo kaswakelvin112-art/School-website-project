@@ -153,8 +153,9 @@ nav {
 } */
 
 .current-page-link {
-  color: var(--surface);
-  background: var(--text-dark);
+  background: var(--accent-light);
+  color: var(--primary);
+  transform: scale(1.1);
 }
 
 .enroll-btn {
@@ -1014,7 +1015,7 @@ tbody tr:hover {
   display: flex;
   flex-direction: row;
   gap: 3rem;
-  justify-content: center;
+  justify-content: space-evenly;
   align-content: center;
 }
 
@@ -1040,21 +1041,43 @@ tbody tr:hover {
   padding: 0.5rem;
 }
 
-.footer .socials ion-icon[data-color="black"]:hover {
+.footer .socials ion-icon[data-color="black"] {
   color: black;
   border-color: black;
+  
 }
-.footer .socials ion-icon[data-color="tomato"]:hover {
+.footer .socials ion-icon[data-color="tomato"] {
   color: var(--accent-dark);
   border-color: var(--accent-dark);
 }
-.footer .socials ion-icon[data-color="blue"]:hover {
+.footer .socials ion-icon[data-color="blue"] {
   color: #1b34f3;
   border-color: #1b34f3;
 }
-.footer .socials ion-icon[data-color="lightblue"]:hover {
+.footer .socials ion-icon[data-color="lightblue"] {
   color: #1bcbf3;
   border-color: #1bcbf3;
+}
+
+.footer .socials ion-icon[data-color="black"]:hover {
+  color: var(--light-primary);
+  border-color: var(--light-primary);
+  background: black;
+}
+.footer .socials ion-icon[data-color="tomato"]:hover {
+  color:var(--light-primary) ;
+  border-color: var(--light-primary);
+  background:var(--accent-dark) ;
+}
+.footer .socials ion-icon[data-color="blue"]:hover {
+  background: #1b34f3;
+  border-color: var(--light-primary);
+  color:var(--light-primary) ;
+}
+.footer .socials ion-icon[data-color="lightblue"]:hover {
+  background: #1bcbf3;
+  border-color:var(--light-primary);
+  color:var(--light-primary) ;
 }
 
 .footer li {
@@ -1074,9 +1097,16 @@ tbody tr:hover {
 
 .footer .contact-links li {
   display: flex;
-  gap: 1rem;
   justify-content: center;
   align-items: center;
+}
+
+.current-page-footer {
+  background: var(--accent-light);
+  color: var(--primary);
+  transform: scale(1.1);
+  padding: 0.3rem;
+  border-radius: 10px;
 }
 
 .footer .contact-links ion-icon {
@@ -1103,13 +1133,19 @@ tbody tr:hover {
 }
 
 .footer .container .school-logo img {
-  width: 200px;
+  width: 180px;
   border-radius: 12px;
 }
 .footer .container .school-logo p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 200;
   text-decoration: none;
+  width: 200px;
+}
+
+.footer hr{
+  width: 80%;
+  margin: 0 auto;
 }
 
 .footer a:hover {
@@ -1544,6 +1580,10 @@ tbody tr:hover {
 
   .footer .container {
     flex-direction: column;
+  }
+
+  ul.page-links{
+    gap:0.5rem;
   }
 
   .footer .contacts p {

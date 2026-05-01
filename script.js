@@ -32,9 +32,19 @@ function highlightCurrentPageLink() {
   const currentFile = window.location.pathname.split("/").pop();
   pageLinks.forEach((link) => {
     if (link.href.split("/").pop() === currentFile) {
+      console.log("Current page link found:", currentFile);
       link.classList.add("current-page-link");
     }
   });
+
+  const pagelinkFooter = document.querySelectorAll(".page-links li a");
+  pagelinkFooter.forEach((link) => {
+    if (link.href.split("/").pop() === currentFile) {
+      console.log("Current page link found:", currentFile);
+      link.classList.add("current-page-footer");
+    }
+  });
+
 }
 
 // Load header and footer when the page loads
@@ -53,6 +63,11 @@ function setupToggleMenu() {
       console.log("Toggle menu clicked");
       navLinks.classList.toggle("show");
       toggleMenu.classList.toggle("active");
+      if(toggleMenu.name==="close-outline"){
+        toggleMenu.name="reorder-three-outline";
+      }else{
+        toggleMenu.name="close-outline";
+      }
     });
   }
 }
