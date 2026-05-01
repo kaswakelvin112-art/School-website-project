@@ -278,7 +278,7 @@ h1.small-screen {
 }
 
 main {
-  padding: 3rem 0 4rem;
+  padding: 1rem 0 2rem;
 }
 
 /* Hero */
@@ -287,7 +287,7 @@ main {
   min-height: 520px;
   display: grid;
   place-items: center;
-  padding: 3rem 0;
+  padding: 2rem 0;
 }
 
 .welcome {
@@ -1282,7 +1282,7 @@ tbody tr:hover {
 @media (max-width: 950px) {
   main {
     width: 95%;
-    margin: 1.5rem auto;
+    margin: 1rem auto;
   }
 
   .nav-links {
