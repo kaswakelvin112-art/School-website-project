@@ -1649,20 +1649,6 @@ tbody tr:hover {
     width: 100%;
   }
   
-  .innerAcademicsLink {
-    position: static;
-    box-shadow: none;
-    background: #f5f5f5;
-    margin-left: 1rem;
-    max-height: 0;
-    overflow: hidden;
-    opacity: 1;
-    visibility: visible;
-    transform: none;
-    transition: max-height 0.3s ease;
-    padding: 0;
-  }
-  
   .innerAcademicsLink.show {
     max-height: 300px;
   }
