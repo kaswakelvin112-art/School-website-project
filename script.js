@@ -110,64 +110,50 @@ function dynamicShowOfCards() {
 }
 
 function enableAcademicsLinks() {
-  const dropdownContainer = document.querySelector('.academic-dropdown');
-  const innerLinks = document.querySelector('.innerAcademicsLink');
-  const addIcon = document.querySelector('.add-icon');
-  
+  const dropdownContainer = document.querySelector(".academic-dropdown");
+  const innerLinks = document.querySelector(".innerAcademicsLink");
+  const addIcon = document.querySelector(".add-icon");
+
   if (!dropdownContainer || !innerLinks) {
     console.warn("Dropdown elements not found");
     return;
   }
-  
+
   if (addIcon) {
-    addIcon.addEventListener('click', function(e) {
-        innerLinks.classList.toggle('show');
-        
-        // Rotate icon
-        if (innerLinks.classList.contains('show')) {
-          addIcon.style.transform = 'rotate(180deg)';
-        } else {
-          addIcon.style.transform = 'rotate(0deg)';
-        }
-      
+    addIcon.addEventListener("click", function (e) {
+      innerLinks.classList.add("show");
+      // Rotate icon
+      if (innerLinks.classList.contains("show")) {
+        addIcon.style.transform = "rotate(180deg)";
+        innerLinks.classList.remove("show");
+      } else {
+        addIcon.style.transform = "rotate(0deg)";
+      }
     });
   }
-  
+
   // Handle click on the Academics link for mobile
-  const academicsLink = document.querySelector('.academic-page');
+  const academicsLink = document.querySelector(".academic-page");
   if (academicsLink) {
-    academicsLink.addEventListener('click', function(e) {
-      if (isMobile()) {
-        e.preventDefault();
-        innerLinks.classList.toggle('show');
-        
-        if (addIcon) {
-          if (innerLinks.classList.contains('show')) {
-            addIcon.style.transform = 'rotate(180deg)';
-          } else {
-            addIcon.style.transform = 'rotate(0deg)';
-          }
+    academicsLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      innerLinks.classList.toggle("show");
+      if (addIcon) {
+        if (innerLinks.classList.contains("show")) {
+          addIcon.style.transform = "rotate(180deg)";
+        } else {
+          addIcon.style.transform = "rotate(0deg)";
         }
       }
     });
   }
-  
+
   // Close dropdown when clicking outside (mobile)
-  document.addEventListener('click', function(e) {
-    if (isMobile() && !dropdownContainer.contains(e.target)) {
-      innerLinks.classList.remove('show');
+  document.addEventListener("click", function (e) {
+    if (!dropdownContainer.contains(e.target)) {
+      innerLinks.classList.remove("show");
       if (addIcon) {
-        addIcon.style.transform = 'rotate(0deg)';
-      }
-    }
-  });
-  
-  // Handle window resize
-  window.addEventListener('resize', function() {
-    if (!isMobile()) {
-      innerLinks.classList.remove('show');
-      if (addIcon) {
-        addIcon.style.transform = 'rotate(0deg)';
+        addIcon.style.transform = "rotate(0deg)";
       }
     }
   });
@@ -179,11 +165,11 @@ function setupToggleMenu() {
   const navLinks = document.querySelector(".nav-links");
 
   if (toggleMenu && navLinks) {
-    toggleMenu.addEventListener("click", function() {
+    toggleMenu.addEventListener("click", function () {
       console.log("Toggle menu clicked");
       navLinks.classList.toggle("show");
       toggleMenu.classList.toggle("active");
-      
+
       // Change icon
       const iconName = toggleMenu.getAttribute("name");
       if (iconName === "close-outline") {
@@ -198,8 +184,13 @@ function setupToggleMenu() {
   document.addEventListener("click", (e) => {
     const toggleBtn = document.querySelector(".menu-toggle");
     const nav = document.querySelector(".nav-links");
-    
-    if (nav && toggleBtn && !nav.contains(e.target) && !toggleBtn.contains(e.target)) {
+
+    if (
+      nav &&
+      toggleBtn &&
+      !nav.contains(e.target) &&
+      !toggleBtn.contains(e.target)
+    ) {
       nav.classList.remove("show");
       if (toggleBtn) {
         toggleBtn.setAttribute("name", "reorder-three-outline");
